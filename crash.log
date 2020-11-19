@@ -1,0 +1,1683 @@
+2020/11/15 15:35:55 [INFO] Terraform version: 0.12.28  
+2020/11/15 15:35:55 [INFO] Go runtime version: go1.12.13
+2020/11/15 15:35:55 [INFO] CLI args: []string{"/usr/bin/terraform", "plan"}
+2020/11/15 15:35:55 [DEBUG] Attempting to open CLI config file: /home/batman/.terraformrc
+2020/11/15 15:35:55 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/11/15 15:35:55 [INFO] CLI command args: []string{"plan"}
+2020/11/15 15:35:55 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/11/15 15:35:55 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/11/15 15:35:55 [DEBUG] New state was assigned lineage "9c45fbc9-a3e3-a21e-bed3-2d97fdb7ebbf"
+2020/11/15 15:35:55 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/11/15 15:35:55 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/11/15 15:35:55 [DEBUG] checking for provider in "."
+2020/11/15 15:35:55 [DEBUG] checking for provider in "/usr/bin"
+2020/11/15 15:35:55 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2020/11/15 15:35:55 [DEBUG] found provider "terraform-provider-aws_v3.14.1_x5"
+2020/11/15 15:35:55 [DEBUG] found valid plugin: "aws", "3.14.1", "/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5"
+2020/11/15 15:35:55 [DEBUG] checking for provisioner in "."
+2020/11/15 15:35:55 [DEBUG] checking for provisioner in "/usr/bin"
+2020/11/15 15:35:55 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2020/11/15 15:35:55 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/11/15 15:35:55 [INFO] backend/local: starting Plan operation
+2020/11/15 15:35:55 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/11/15 15:35:55 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/11/15 15:35:55 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: existing snapshot has lineage "b5956dcf-7d87-cf84-386e-35d7704eb606" serial 32
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/11/15 15:35:55 [TRACE] backend/local: reading remote state for workspace "default"
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/11/15 15:35:55 [TRACE] statemgr.Filesystem: read snapshot with lineage "b5956dcf-7d87-cf84-386e-35d7704eb606" serial 32
+2020/11/15 15:35:55 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/11/15 15:35:55 [TRACE] backend/local: building context for current working directory
+2020/11/15 15:35:55 [TRACE] terraform.NewContext: starting
+2020/11/15 15:35:55 [TRACE] terraform.NewContext: resolving provider version selections
+2020/11/15 15:35:56 [TRACE] terraform.NewContext: loading provider schemas
+2020/11/15 15:35:56 [TRACE] LoadSchemas: retrieving schema for provider type "aws"
+2020-11-15T15:35:56.131+0530 [INFO]  plugin: configuring client automatic mTLS
+2020-11-15T15:35:56.173+0530 [DEBUG] plugin: starting plugin: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 args=[/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5]
+2020-11-15T15:35:56.173+0530 [DEBUG] plugin: plugin started: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=29898
+2020-11-15T15:35:56.173+0530 [DEBUG] plugin: waiting for RPC address: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5
+2020-11-15T15:35:56.233+0530 [INFO]  plugin.terraform-provider-aws_v3.14.1_x5: configuring server automatic mTLS: timestamp=2020-11-15T15:35:56.232+0530
+2020-11-15T15:35:56.277+0530 [DEBUG] plugin: using plugin: version=5
+2020-11-15T15:35:56.277+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: plugin address: network=unix address=/tmp/plugin871754566 timestamp=2020-11-15T15:35:56.276+0530
+2020/11/15 15:35:56 [TRACE] GRPCProvider: GetSchema
+2020-11-15T15:35:56.383+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/15 15:35:56 [TRACE] GRPCProvider: Close
+2020-11-15T15:35:56.505+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-15T15:35:56.509+0530 [DEBUG] plugin: plugin process exited: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=29898
+2020-11-15T15:35:56.509+0530 [DEBUG] plugin: plugin exited
+2020/11/15 15:35:56 [TRACE] LoadSchemas: retrieving schema for provisioner "remote-exec"
+2020-11-15T15:35:56.510+0530 [DEBUG] plugin: starting plugin: path=/usr/bin/terraform args=[/usr/bin/terraform, internal-plugin, provisioner, remote-exec]
+2020-11-15T15:35:56.510+0530 [DEBUG] plugin: plugin started: path=/usr/bin/terraform pid=29913
+2020-11-15T15:35:56.510+0530 [DEBUG] plugin: waiting for RPC address: path=/usr/bin/terraform
+2020-11-15T15:35:56.548+0530 [DEBUG] plugin: using plugin: version=5
+2020-11-15T15:35:56.548+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020-11-15T15:35:56.550+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-15T15:35:56.553+0530 [DEBUG] plugin: plugin process exited: path=/usr/bin/terraform pid=29913
+2020-11-15T15:35:56.553+0530 [DEBUG] plugin: plugin exited
+2020/11/15 15:35:56 [TRACE] terraform.NewContext: complete
+2020/11/15 15:35:56 [TRACE] backend/local: finished building terraform.Context
+2020/11/15 15:35:56 [TRACE] backend/local: requesting interactive input, if necessary
+2020/11/15 15:35:56 [TRACE] Context.Input: Prompting for provider arguments
+2020/11/15 15:35:56 [TRACE] Context.Input: Provider provider.aws declared at provider.tf:1,1-15
+2020/11/15 15:35:56 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/11/15 15:35:56 [TRACE] backend/local: running validation operation
+2020/11/15 15:35:56 [INFO] terraform: building graph: GraphTypeValidate
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/15 15:35:56 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  output.ip - *terraform.NodeApplyableOutput
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/15 15:35:56 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/15 15:35:56 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.web" (*terraform.NodeValidatableResource) config from ec2.tf:1,1-30
+2020/11/15 15:35:56 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.mainvpc" (*terraform.NodeValidatableResource) config from ec2.tf:35,2-30
+2020/11/15 15:35:56 [TRACE] AttachResourceConfigTransformer: attaching to "aws_default_security_group.default" (*terraform.NodeValidatableResource) config from ec2.tf:44,1-48
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  output.ip - *terraform.NodeApplyableOutput
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/15 15:35:56 [TRACE] MissingProviderTransformer: added implicit provisioner remote-exec, first implied by aws_instance.web
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/15 15:35:56 [TRACE] ProvisionerTransformer: aws_instance.web is provisioned by remote-exec ("provisioner.remote-exec")
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/15 15:35:56 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from provider.tf:1,1-15
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+  aws_instance.web - *terraform.NodeValidatableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: aws_instance.web is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: aws_vpc.mainvpc is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: aws_default_security_group.default is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_instance.web
+2020/11/15 15:35:56 [DEBUG] ProviderTransformer: "aws_instance.web" (*terraform.NodeValidatableResource) needs provider.aws
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_vpc.mainvpc
+2020/11/15 15:35:56 [DEBUG] ProviderTransformer: "aws_vpc.mainvpc" (*terraform.NodeValidatableResource) needs provider.aws
+2020/11/15 15:35:56 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_default_security_group.default
+2020/11/15 15:35:56 [DEBUG] ProviderTransformer: "aws_default_security_group.default" (*terraform.NodeValidatableResource) needs provider.aws
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/15 15:35:56 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/15 15:35:56 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.web
+2020/11/15 15:35:56 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to aws_instance.web
+2020/11/15 15:35:56 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.mainvpc
+2020/11/15 15:35:56 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.aws
+2020/11/15 15:35:56 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_default_security_group.default
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "aws_default_security_group.default" references: [aws_vpc.mainvpc var.ports]
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "output.ip" references: [aws_instance.web]
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.keyname" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.ports" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.key" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "aws_instance.web" references: [var.ami var.keyname var.instance_type var.key]
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "aws_vpc.mainvpc" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.tags" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "var.ami" references: []
+2020/11/15 15:35:56 [DEBUG] ReferenceTransformer: "provider.aws" references: []
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodeValidatableResource
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.aws (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/15 15:35:56 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodeValidatableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    output.ip - *terraform.NodeApplyableOutput
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodeValidatableResource
+    aws_instance.web - *terraform.NodeValidatableResource
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.aws (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:56 [DEBUG] Starting graph walk: walkValidate
+2020/11/15 15:35:56 [TRACE] dag/walk: updating graph
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "aws_vpc.mainvpc"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "aws_instance.web"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "aws_default_security_group.default"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "root"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "output.ip"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "provider.aws"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.ports"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.tags"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec (close)"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.key"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.ami"
+2020/11/15 15:35:56 [TRACE] dag/walk: added new vertex: "var.keyname"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.ami"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.key"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "output.ip"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.tags"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_default_security_group.default" waiting on "aws_vpc.mainvpc"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_default_security_group.default" waiting on "var.ports"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_default_security_group.default"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_instance.web"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "provisioner.remote-exec"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "provisioner.remote-exec (close)" waiting on "aws_instance.web"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_vpc.mainvpc" waiting on "provider.aws"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.instance_type"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "provider.aws"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.keyname"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "output.ip" waiting on "aws_instance.web"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_default_security_group.default"
+2020/11/15 15:35:56 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.remote-exec (close)"
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "output.ip", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "aws_instance.web", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "aws_default_security_group.default", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "provisioner.remote-exec (close)", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: dependencies changed for "aws_vpc.mainvpc", sending new deps
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.keyname"
+2020/11/15 15:35:56 [TRACE] vertex "var.keyname": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.tags"
+2020/11/15 15:35:56 [TRACE] vertex "var.keyname": evaluating
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.instance_type"
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.keyname
+2020/11/15 15:35:56 [TRACE] vertex "var.instance_type": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.ami"
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "provider.aws"
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.ports"
+2020/11/15 15:35:56 [TRACE] vertex "var.ami": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] vertex "provider.aws": starting visit (*terraform.NodeApplyableProvider)
+2020/11/15 15:35:56 [TRACE] vertex "var.ports": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] vertex "var.ami": evaluating
+2020/11/15 15:35:56 [TRACE] vertex "var.ports": evaluating
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.ami
+2020/11/15 15:35:56 [TRACE] vertex "provider.aws": evaluating
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: provider.aws
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.ports
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "var.key"
+2020/11/15 15:35:56 [TRACE] vertex "var.key": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] vertex "var.key": evaluating
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.key
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.key
+2020/11/15 15:35:56 [TRACE] vertex "var.key": visit complete
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.ports
+2020/11/15 15:35:56 [TRACE] vertex "var.ports": visit complete
+2020/11/15 15:35:56 [TRACE] vertex "var.tags": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:56 [TRACE] vertex "var.tags": evaluating
+2020/11/15 15:35:56 [TRACE] vertex "var.instance_type": evaluating
+2020-11-15T15:35:56.557+0530 [INFO]  plugin: configuring client automatic mTLS
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.tags
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] dag/walk: visiting "provisioner.remote-exec"
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.tags
+2020/11/15 15:35:56 [TRACE] vertex "provisioner.remote-exec": starting visit (*terraform.NodeProvisioner)
+2020/11/15 15:35:56 [TRACE] vertex "provisioner.remote-exec": evaluating
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: provisioner.remote-exec
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalInitProvisioner
+2020/11/15 15:35:56 [TRACE] vertex "var.tags": visit complete
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.ami
+2020/11/15 15:35:56 [TRACE] vertex "var.ami": visit complete
+2020/11/15 15:35:56 [TRACE] [walkValidate] Entering eval tree: var.instance_type
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.instance_type
+2020/11/15 15:35:56 [TRACE] vertex "var.instance_type": visit complete
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: var.keyname
+2020/11/15 15:35:56 [TRACE] vertex "var.keyname": visit complete
+2020-11-15T15:35:56.557+0530 [DEBUG] plugin: starting plugin: path=/usr/bin/terraform args=[/usr/bin/terraform, internal-plugin, provisioner, remote-exec]
+2020-11-15T15:35:56.557+0530 [DEBUG] plugin: plugin started: path=/usr/bin/terraform pid=29938
+2020-11-15T15:35:56.557+0530 [DEBUG] plugin: waiting for RPC address: path=/usr/bin/terraform
+2020-11-15T15:35:56.594+0530 [DEBUG] plugin: using plugin: version=5
+2020/11/15 15:35:56 [TRACE] [walkValidate] Exiting eval tree: provisioner.remote-exec
+2020/11/15 15:35:56 [TRACE] vertex "provisioner.remote-exec": visit complete
+2020-11-15T15:35:56.595+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020-11-15T15:35:56.608+0530 [DEBUG] plugin: starting plugin: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 args=[/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5]
+2020-11-15T15:35:56.608+0530 [DEBUG] plugin: plugin started: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=29965
+2020-11-15T15:35:56.608+0530 [DEBUG] plugin: waiting for RPC address: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5
+2020-11-15T15:35:56.660+0530 [INFO]  plugin.terraform-provider-aws_v3.14.1_x5: configuring server automatic mTLS: timestamp=2020-11-15T15:35:56.660+0530
+2020-11-15T15:35:56.706+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: plugin address: address=/tmp/plugin659368204 network=unix timestamp=2020-11-15T15:35:56.706+0530
+2020-11-15T15:35:56.706+0530 [DEBUG] plugin: using plugin: version=5
+2020/11/15 15:35:56 [TRACE] BuiltinEvalContext: Initialized "aws" provider for provider.aws
+2020/11/15 15:35:56 [TRACE] <root>: eval: terraform.EvalNoop
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/11/15 15:35:56 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/11/15 15:35:56 [TRACE] buildProviderConfig for provider.aws: using explicit config only
+2020/11/15 15:35:56 [TRACE] GRPCProvider: GetSchema
+2020-11-15T15:35:56.804+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/15 15:35:56 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/11/15 15:35:57 [TRACE] <root>: eval: terraform.EvalNoop
+2020/11/15 15:35:57 [TRACE] <root>: eval: terraform.EvalNoop
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: provider.aws
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "aws_vpc.mainvpc"
+2020/11/15 15:35:57 [TRACE] vertex "aws_vpc.mainvpc": starting visit (*terraform.NodeValidatableResource)
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "aws_instance.web"
+2020/11/15 15:35:57 [TRACE] vertex "aws_vpc.mainvpc": evaluating
+2020/11/15 15:35:57 [TRACE] vertex "aws_instance.web": starting visit (*terraform.NodeValidatableResource)
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: aws_vpc.mainvpc
+2020/11/15 15:35:57 [TRACE] vertex "aws_instance.web": evaluating
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: aws_instance.web
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/11/15 15:35:57 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/15 15:35:57 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: aws_vpc.mainvpc
+2020/11/15 15:35:57 [TRACE] vertex "aws_vpc.mainvpc": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "aws_default_security_group.default"
+2020/11/15 15:35:57 [TRACE] vertex "aws_default_security_group.default": starting visit (*terraform.NodeValidatableResource)
+2020/11/15 15:35:57 [TRACE] vertex "aws_default_security_group.default": evaluating
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: aws_default_security_group.default
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalGetProvisioner
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalValidateProvisioner
+2020/11/15 15:35:57 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: aws_default_security_group.default
+2020/11/15 15:35:57 [TRACE] vertex "aws_default_security_group.default": visit complete
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: aws_instance.web
+2020/11/15 15:35:57 [TRACE] vertex "aws_instance.web": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "output.ip"
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "provider.aws (close)"
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": starting visit (*terraform.NodeApplyableOutput)
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "provisioner.remote-exec (close)"
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": evaluating
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws (close)": evaluating
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: output.ip
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec (close)": starting visit (*terraform.graphNodeCloseProvisioner)
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: provider.aws (close)
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec (close)": evaluating
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalWriteOutput
+2020/11/15 15:35:57 [TRACE] GRPCProvider: Close
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: provisioner.remote-exec (close)
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalCloseProvisioner
+2020/11/15 15:35:57 [TRACE] EvalWriteOutput: Removing output.ip from state (it is now null)
+2020/11/15 15:35:57 [TRACE] EvalWriteOutput: Saving Create change for output.ip in changeset
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: output.ip
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:35:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/11/15 15:35:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/11/15 15:35:57 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/11/15 15:35:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-11-15T15:35:57.042+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-15T15:35:57.042+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-15T15:35:57.045+0530 [DEBUG] plugin: plugin process exited: path=/usr/bin/terraform pid=29938
+2020-11-15T15:35:57.045+0530 [DEBUG] plugin: plugin exited
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: provisioner.remote-exec (close)
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec (close)": visit complete
+2020-11-15T15:35:57.046+0530 [DEBUG] plugin: plugin process exited: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=29965
+2020-11-15T15:35:57.046+0530 [DEBUG] plugin: plugin exited
+2020/11/15 15:35:57 [TRACE] [walkValidate] Exiting eval tree: provider.aws (close)
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws (close)": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "root"
+2020/11/15 15:35:57 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/11/15 15:35:57 [TRACE] vertex "root": visit complete
+2020/11/15 15:35:57 [INFO] backend/local: plan calling Refresh
+2020/11/15 15:35:57 [INFO] terraform: building graph: GraphTypeRefresh
+2020/11/15 15:35:57 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/15 15:35:57 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/15 15:35:57 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  output.ip - *terraform.NodeApplyableOutput
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/15 15:35:57 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from provider.tf:1,1-15
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/15 15:35:57 [DEBUG] pruning unused provider.aws
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  output.ip - *terraform.NodeApplyableOutput
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.tags" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.ports" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "output.ip" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.key" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.ami" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.keyname" references: []
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  output.ip - *terraform.NodeApplyableOutput
+  root - terraform.graphNodeRoot
+    output.ip - *terraform.NodeApplyableOutput
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/11/15 15:35:57 [DEBUG] Starting graph walk: walkRefresh
+2020/11/15 15:35:57 [TRACE] dag/walk: updating graph
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "output.ip"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "root"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.keyname"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.tags"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.ports"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "output.ip"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.instance_type"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.keyname"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.tags"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "var.ports"
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.keyname"
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "output.ip"
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": evaluating
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.tags"
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.keyname
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.ports"
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": starting visit (*terraform.NodeApplyableOutput)
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.instance_type"
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": evaluating
+2020/11/15 15:35:57 [TRACE] vertex "var.key": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.key": evaluating
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: output.ip
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.key
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": evaluating
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.key
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.instance_type
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.instance_type
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": evaluating
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.ports
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.ports
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.key": visit complete
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalWriteOutput
+2020/11/15 15:35:57 [TRACE] EvalWriteOutput: Removing output.ip from state (it is now null)
+2020/11/15 15:35:57 [TRACE] EvalWriteOutput: Saving Create change for output.ip in changeset
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: output.ip
+2020/11/15 15:35:57 [TRACE] vertex "output.ip": visit complete
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.keyname
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": evaluating
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.ami
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.ami
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": evaluating
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Entering eval tree: var.tags
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkRefresh] Exiting eval tree: var.tags
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "root"
+2020/11/15 15:35:57 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/11/15 15:35:57 [TRACE] vertex "root": visit complete
+2020/11/15 15:35:57 [INFO] backend/local: plan calling Plan
+2020/11/15 15:35:57 [INFO] terraform: building graph: GraphTypePlan
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/15 15:35:57 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  output.ip - *terraform.NodeApplyableOutput
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/15 15:35:57 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/15 15:35:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_default_security_group.default" (*terraform.NodePlannableResource) config from ec2.tf:44,1-48
+2020/11/15 15:35:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.web" (*terraform.NodePlannableResource) config from ec2.tf:1,1-30
+2020/11/15 15:35:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.mainvpc" (*terraform.NodePlannableResource) config from ec2.tf:35,2-30
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  output.ip - *terraform.NodeApplyableOutput
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/15 15:35:57 [TRACE] MissingProviderTransformer: added implicit provisioner remote-exec, first implied by aws_instance.web
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/15 15:35:57 [TRACE] ProvisionerTransformer: aws_instance.web is provisioned by remote-exec ("provisioner.remote-exec")
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/15 15:35:57 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from provider.tf:1,1-15
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+  aws_instance.web - *terraform.NodePlannableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: aws_vpc.mainvpc is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: aws_instance.web is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: aws_default_security_group.default is provided by provider.aws or inherited equivalent
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_vpc.mainvpc
+2020/11/15 15:35:57 [DEBUG] ProviderTransformer: "aws_vpc.mainvpc" (*terraform.NodePlannableResource) needs provider.aws
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_instance.web
+2020/11/15 15:35:57 [DEBUG] ProviderTransformer: "aws_instance.web" (*terraform.NodePlannableResource) needs provider.aws
+2020/11/15 15:35:57 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_default_security_group.default
+2020/11/15 15:35:57 [DEBUG] ProviderTransformer: "aws_default_security_group.default" (*terraform.NodePlannableResource) needs provider.aws
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/15 15:35:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/15 15:35:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.web
+2020/11/15 15:35:57 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to aws_instance.web
+2020/11/15 15:35:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.mainvpc
+2020/11/15 15:35:57 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.aws
+2020/11/15 15:35:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_default_security_group.default
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "provider.aws" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "aws_instance.web" references: [var.ami var.keyname var.instance_type var.key var.key]
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "aws_vpc.mainvpc" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "output.ip" references: [aws_instance.web]
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.tags" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.keyname" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "aws_default_security_group.default" references: [aws_vpc.mainvpc var.ports]
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.ports" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.key" references: []
+2020/11/15 15:35:57 [DEBUG] ReferenceTransformer: "var.ami" references: []
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/15 15:35:57 [TRACE] ForcedCBDTransformer: "aws_default_security_group.default" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/11/15 15:35:57 [TRACE] ForcedCBDTransformer: "aws_instance.web" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/11/15 15:35:57 [TRACE] ForcedCBDTransformer: "aws_vpc.mainvpc" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodePlannableResource
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    output.ip - *terraform.NodeApplyableOutput
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+    var.ports - *terraform.NodeRootVariable
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodePlannableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.aws (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/15 15:35:57 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_vpc.mainvpc - *terraform.NodePlannableResource
+    var.ports - *terraform.NodeRootVariable
+  aws_instance.web - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.ami - *terraform.NodeRootVariable
+    var.instance_type - *terraform.NodeRootVariable
+    var.key - *terraform.NodeRootVariable
+    var.keyname - *terraform.NodeRootVariable
+  aws_vpc.mainvpc - *terraform.NodePlannableResource
+    provider.aws - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    output.ip - *terraform.NodeApplyableOutput
+    var.tags - *terraform.NodeRootVariable
+  output.ip - *terraform.NodeApplyableOutput
+    aws_instance.web - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+    aws_default_security_group.default - *terraform.NodePlannableResource
+    aws_instance.web - *terraform.NodePlannableResource
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    aws_instance.web - *terraform.NodePlannableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.aws (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.ami - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key - *terraform.NodeRootVariable
+  var.keyname - *terraform.NodeRootVariable
+  var.ports - *terraform.NodeRootVariable
+  var.tags - *terraform.NodeRootVariable
+  ------
+2020/11/15 15:35:57 [DEBUG] Starting graph walk: walkPlan
+2020/11/15 15:35:57 [TRACE] dag/walk: updating graph
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "aws_vpc.mainvpc"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.tags"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "provider.aws"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "output.ip"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.keyname"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec (close)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.ports"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "root"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "aws_default_security_group.default"
+2020/11/15 15:35:57 [TRACE] dag/walk: added new vertex: "aws_instance.web"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.keyname"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_default_security_group.default" waiting on "var.ports"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_instance.web"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "provisioner.remote-exec (close)" waiting on "aws_instance.web"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_default_security_group.default" waiting on "aws_vpc.mainvpc"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "output.ip" waiting on "aws_instance.web"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_default_security_group.default"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_vpc.mainvpc" waiting on "provider.aws"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "output.ip"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_default_security_group.default"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.remote-exec (close)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "var.instance_type"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.tags"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "provider.aws"
+2020/11/15 15:35:57 [TRACE] dag/walk: added edge: "aws_instance.web" waiting on "provisioner.remote-exec"
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "output.ip", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "aws_vpc.mainvpc", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "aws_instance.web", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "aws_default_security_group.default", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: dependencies changed for "provisioner.remote-exec (close)", sending new deps
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.ports"
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.ports
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.ports
+2020/11/15 15:35:57 [TRACE] vertex "var.ports": visit complete
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "provider.aws"
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws": starting visit (*terraform.NodeApplyableProvider)
+2020/11/15 15:35:57 [TRACE] vertex "provider.aws": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: provider.aws
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.key"
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.keyname"
+2020/11/15 15:35:57 [TRACE] vertex "var.key": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.ami"
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.instance_type"
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": evaluating
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.ami
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.instance_type
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "provisioner.remote-exec"
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec": starting visit (*terraform.NodeProvisioner)
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: provisioner.remote-exec
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalInitProvisioner
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.ami
+2020/11/15 15:35:57 [TRACE] vertex "var.ami": visit complete
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-11-15T15:35:57.051+0530 [DEBUG] plugin: starting plugin: path=/usr/bin/terraform args=[/usr/bin/terraform, internal-plugin, provisioner, remote-exec]
+2020/11/15 15:35:57 [TRACE] dag/walk: visiting "var.tags"
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.tags
+2020-11-15T15:35:57.051+0530 [INFO]  plugin: configuring client automatic mTLS
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.tags
+2020/11/15 15:35:57 [TRACE] vertex "var.tags": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": starting visit (*terraform.NodeRootVariable)
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.keyname
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.keyname
+2020/11/15 15:35:57 [TRACE] vertex "var.keyname": visit complete
+2020/11/15 15:35:57 [TRACE] vertex "var.key": evaluating
+2020/11/15 15:35:57 [TRACE] [walkPlan] Entering eval tree: var.key
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.key
+2020/11/15 15:35:57 [TRACE] vertex "var.key": visit complete
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020-11-15T15:35:57.052+0530 [DEBUG] plugin: plugin started: path=/usr/bin/terraform pid=29985
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: var.instance_type
+2020-11-15T15:35:57.052+0530 [DEBUG] plugin: waiting for RPC address: path=/usr/bin/terraform
+2020/11/15 15:35:57 [TRACE] vertex "var.instance_type": visit complete
+2020-11-15T15:35:57.091+0530 [DEBUG] plugin: using plugin: version=5
+2020/11/15 15:35:57 [TRACE] [walkPlan] Exiting eval tree: provisioner.remote-exec
+2020/11/15 15:35:57 [TRACE] vertex "provisioner.remote-exec": visit complete
+2020-11-15T15:35:57.092+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020-11-15T15:35:57.107+0530 [DEBUG] plugin: starting plugin: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 args=[/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5]
+2020-11-15T15:35:57.108+0530 [DEBUG] plugin: plugin started: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=30005
+2020-11-15T15:35:57.108+0530 [DEBUG] plugin: waiting for RPC address: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5
+2020-11-15T15:35:57.158+0530 [INFO]  plugin.terraform-provider-aws_v3.14.1_x5: configuring server automatic mTLS: timestamp=2020-11-15T15:35:57.158+0530
+2020-11-15T15:35:57.212+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: plugin address: address=/tmp/plugin459687940 network=unix timestamp=2020-11-15T15:35:57.212+0530
+2020-11-15T15:35:57.212+0530 [DEBUG] plugin: using plugin: version=5
+2020/11/15 15:35:57 [TRACE] BuiltinEvalContext: Initialized "aws" provider for provider.aws
+2020/11/15 15:35:57 [TRACE] <root>: eval: terraform.EvalNoop
+2020/11/15 15:35:57 [TRACE] <root>: eval: terraform.EvalNoop
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020-11-15T15:35:57.304+0530 [TRACE] plugin.stdio: waiting for stdio data
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/11/15 15:35:57 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/11/15 15:35:57 [TRACE] buildProviderConfig for provider.aws: using explicit config only
+2020/11/15 15:35:57 [TRACE] GRPCProvider: GetSchema
+2020/11/15 15:35:57 [TRACE] GRPCProvider: Configure
+2020-11-15T15:35:57.409+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 2020/11/15 15:35:57 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2020-11-15T15:35:57.410+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 2020/11/15 15:35:57 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:02 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:07 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:12 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:17 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:22 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:27 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:32 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:37 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:42 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:47 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:52 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:36:57 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:02 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:07 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:12 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:17 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:22 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:27 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:32 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:37 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:42 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:47 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:52 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:37:57 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:38:02 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:38:07 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:38:12 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "provider.aws (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_default_security_group.default"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "root" is waiting for "meta.count-boundary (EachMode fixup)"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "aws_instance.web" is waiting for "provider.aws"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "output.ip" is waiting for "aws_instance.web"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "aws_default_security_group.default" is waiting for "aws_vpc.mainvpc"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "aws_vpc.mainvpc" is waiting for "provider.aws"
+2020/11/15 15:38:17 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "aws_instance.web"
+2020/11/15 15:38:20 [TRACE] backend/local: waiting for the running operation to stop
+2020/11/15 15:38:20 [WARN] terraform: Stop called, initiating interrupt sequence
+2020/11/15 15:38:20 [WARN] terraform: run context exists, stopping
+2020/11/15 15:38:20 [INFO] terraform: waiting for graceful stop to complete
+2020/11/15 15:38:20 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2020/11/15 15:38:20 [TRACE] GRPCProvider: Stop
+2020-11-15T15:38:20.427+0530 [TRACE] plugin.terraform-provider-aws_v3.14.1_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2020-11-15T15:38:20.427+0530
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: panic: close of nil channel
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: goroutine 145 [running]:
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc001729580)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc001729580, 0x6b46aa0, 0xc0016261b0, 0xc0016261e0, 0xc001729580, 0xc0016261b0, 0xc000734ba0)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa1
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x5de8540, 0xc001729580, 0x6b46aa0, 0xc0016261b0, 0xc000300ba0, 0x0, 0x6b46aa0, 0xc0016261b0, 0x0, 0x0)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x217
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0005d2700, 0x6b6aa80, 0xc001262300, 0xc000126100, 0xc000b00b40, 0xa19a9c8, 0x0, 0x0, 0x0)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x50a
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: google.golang.org/grpc.(*Server).handleStream(0xc0005d2700, 0x6b6aa80, 0xc001262300, 0xc000126100, 0x0)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xcfd
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000b60180, 0xc0005d2700, 0x6b6aa80, 0xc001262300, 0xc000126100)
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa1
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-11-15T15:38:20.432+0530 [DEBUG] plugin.terraform-provider-aws_v3.14.1_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x204
+2020/11/15 15:38:20 [ERROR] <root>: eval: *terraform.EvalConfigProvider, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/15 15:38:20 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/15 15:38:20 [ERROR] <root>: eval: *terraform.EvalOpFilter, err: rpc error: code = Unavailable desc = transport is closing
+2020-11-15T15:38:20.443+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020/11/15 15:38:20 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/11/15 15:38:20 [TRACE] [walkPlan] Exiting eval tree: provider.aws
+2020/11/15 15:38:20 [TRACE] vertex "provider.aws": visit complete
+2020-11-15T15:38:20.443+0530 [DEBUG] plugin: plugin process exited: path=/home/batman/Documents/practices/terraform/ravi/.terraform/plugins/linux_amd64/terraform-provider-aws_v3.14.1_x5 pid=30005 error="exit status 2"
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "aws_vpc.mainvpc" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "aws_instance.web" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "aws_default_security_group.default" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "provider.aws (close)" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "provisioner.remote-exec (close)" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "output.ip" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/11/15 15:38:20 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/11/15 15:38:20 [TRACE] backend/local: graceful stop has completed
+2020/11/15 15:38:20 [INFO] backend/local: plan operation completed
+2020/11/15 15:38:20 [WARN] terraform: stop complete
+2020/11/15 15:38:20 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/11/15 15:38:20 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-11-15T15:38:20.444+0530 [DEBUG] plugin: plugin exited
+2020-11-15T15:38:20.445+0530 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-15T15:38:20.449+0530 [DEBUG] plugin: plugin process exited: path=/usr/bin/terraform pid=29985
+2020-11-15T15:38:20.449+0530 [DEBUG] plugin: plugin exited
