@@ -22,7 +22,7 @@ resource "aws_subnet" "publicsubnet" {
   //cidr_block = element(var.public_subnets, count.index)
   map_public_ip_on_launch = var.map_public_ip
   tags = {
-    Name = "var.public_subnet"
+    Name = var.public_subnet
   }
 }
 ### Private Subnet ###
@@ -31,7 +31,7 @@ resource "aws_subnet" "privatesubnet" {
   cidr_block              = var.cidr_block["private_subnet"]
   map_public_ip_on_launch = false
   tags = {
-    Name = "var.private_subnet"
+    Name = var.private_subnet
   }
 }
 
