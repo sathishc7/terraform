@@ -53,10 +53,10 @@ resource "aws_route_table" "route_table" {
   }
 
   tags = {
-    Name = "awsroute"
+    Name = "Public_route"
   }
 }
-#### Public Subnet Assc in Route Table  ###
+### Public Subnet Assc in Route Table  ###
 resource "aws_route_table_association" "route-asst" {
   subnet_id      = aws_subnet.publicsubnet.id
   route_table_id = aws_route_table.route_table.id
@@ -85,7 +85,7 @@ resource "aws_route_table" "private_route" {
   }
 
   tags = {
-    Name = "awsnatroute"
+    Name = "Private_route"
   }
 }
 ### associate private subnet with NAT route table  ###
