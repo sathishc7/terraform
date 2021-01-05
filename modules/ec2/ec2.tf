@@ -1,8 +1,8 @@
 resource "aws_instance" "web-app" {
   ami           = var.ami
-  instance_type = "t3a.medium"
+  instance_type = "t2.small"
   key_name      = var.keyname
-  vpc_security_group_ids = ["${aws_security_group.web-app.id}"]
+ vpc_security_group_ids = ["${aws_security_group.web-app.id}"]
   subnet_id     = var.public_subnet
   tags = {
     Name = "web-instance"
@@ -12,7 +12,7 @@ resource "aws_instance" "web-app" {
 
 resource "aws_instance" "db" {
   ami           = var.ami
-  instance_type = "t3a.medium"
+  instance_type = "t2.small"
   key_name      = var.keyname
   vpc_security_group_ids = ["${aws_security_group.db-sg.id}"]
   subnet_id     = var.private_subnet
@@ -21,10 +21,11 @@ resource "aws_instance" "db" {
   }
 }
 
+
 variable "web-app-sg" {
   type        = list(number)
   description = "list of ingress ports"
-  default     = [443, 80,]
+  default     = [443, 80,22]
 }
 
 resource "aws_security_group" "web-app" {
@@ -45,8 +46,8 @@ resource "aws_security_group" "web-app" {
   dynamic "egress" {
     for_each = var.web-app-sg
     content {
-      from_port   = egress.value
-      to_port     = egress.value
+      from_port   = 0 #egress.value
+      to_port     = 65535 #egress.value
       protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
@@ -63,15 +64,15 @@ resource "aws_security_group" "db-sg" {
 
   ingress {
     description = "TLS from VPC"
-    from_port   = 3306
-    to_port     = 3306
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["${aws_instance.web-app.private_ip}/32"]
   }
 
   egress {
     from_port   = 0
-    to_port     = 0
+    to_port     = 65535
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -81,7 +82,3 @@ resource "aws_security_group" "db-sg" {
   }
 }
 
-/* module "vpc" {
-  source = "../vpc/"
-}
- */
