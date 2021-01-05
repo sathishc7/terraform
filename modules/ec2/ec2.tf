@@ -1,5 +1,5 @@
 resource "aws_instance" "web-app" {
-  ami           = "ami-0cda377a1b884a1bc"
+  ami           = var.ami
   instance_type = "t3a.medium"
   key_name      = var.keyname
   vpc_security_group_ids = ["${aws_security_group.web-app.id}"]
@@ -11,7 +11,7 @@ resource "aws_instance" "web-app" {
 
 
 resource "aws_instance" "db" {
-  ami           = "ami-0cda377a1b884a1bc"
+  ami           = var.ami
   instance_type = "t3a.medium"
   key_name      = var.keyname
   vpc_security_group_ids = ["${aws_security_group.db-sg.id}"]
